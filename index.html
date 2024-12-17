@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+<body>
+    <header>
+        <h1>Expense Manager</h1>
+    </header>
+    <div class="container">
+        <form id="transaction-form">
+            <input type="text" id="transaction-name" placeholder="Name" required>
+            <input type="number" id="transaction-amount" placeholder="Amount" required>
+            <select id="transaction-type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <button type="submit">Add Transaction</button>
+        </form>
+        <div class="list" id="transaction-list"></div>
+        <div class="total" id="balance">Balance: $0</div>
+        <div class="chart-container">
+            <div class="chart-title">Expenses Spend Pie Chart</div>
+            <canvas id="expense-chart"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
